@@ -1,0 +1,78 @@
+.posts {
+  color: #474747;
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 10rem 0;
+  &__title {
+    margin-bottom: 7rem;
+  }
+  .post {
+    background-color: #fff;
+    margin: 2rem;
+    transition: all .3s;
+    border-bottom: 2px solid transparent;
+    &:hover{
+        border-color: var(--color-primary);
+    }
+    &__details {
+      padding: 3rem;
+    }
+    &__img {
+      background-image: url("../img/moun.jpg");
+      width: 100%;
+      height: 20rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      cursor: pointer;
+     
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        content: "\02665 ";
+        color: red;
+        font-size: 5rem;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: all 0.4s;
+        width: 100%;
+         background-color: rgba(175, 1, 102, 0.26);
+        height: 100%;
+      }
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+    &__description {
+      display: flex;
+      justify-content: center;
+      font-size: 1.2rem;
+      align-items: center;
+      padding: 2rem 0;
+      a,
+      a:hover,
+      a:active {
+        padding: 0 1rem;
+        text-decoration: none;
+        color: var(--color-primary);
+      }
+      .fa {
+        font-size: 2rem;
+      }
+    }
+    time {
+      padding: 0 1rem;
+      border-right: 1px solid var(--color-gery);
+    }
+    &__text {
+      font-size: 1.4rem;
+    }
+    &__btn {
+      font-size: 1.6rem;
+      color: var(--color-primary);
+      text-decoration: none;
+      padding: 2rem;
+    }
+  }
+}
